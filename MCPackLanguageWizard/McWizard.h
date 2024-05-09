@@ -36,6 +36,7 @@ namespace depozit {
 	//helpful methods
 	std::wstring strToWstr(const std::string&);
 	std::string wstrToStr(const std::wstring&);
+	std::wstring typeToWstring(const Type&);
 
 
 	class TextLine {
@@ -55,6 +56,7 @@ namespace depozit {
 		std::wstring getOrigLine();
 		std::wstring getLocaleLine();
 		std::wstring getFullLine();
+		std::vector<std::wstring> getFullLineByVec();
 		void getParamsByLink(int&, Type&, std::wstring&);
 		void getParamsByLink(int&, Type&, std::wstring&, std::wstring&);
 
@@ -67,8 +69,8 @@ namespace depozit {
 		//vars
 		int posInFile;
 		Type type;
-		std::wstring OricLine;
-		std::wstring LocaleLine;
+		std::wstring origLine;
+		std::wstring localeLine;
 		bool isEmpty;
 	};
 }
