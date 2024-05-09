@@ -5,7 +5,7 @@ MCPackLanguageWizard is an enhanced and extended version of our previous library
 ***
 
 ### Description ###
-Unlike the previous version, MCPackLanguageWizard can parse not only quests from the FTB Quests mod, but also texts from other mods, links in kube js, and a few other minor details. You can find detailed information about this in the documentation below.
+Unlike the previous version, MCPackLanguageWizard can work not only with quests from the FTB Quests mod, but also texts from other mods, links in kube js, and a few other minor details. You can find detailed information about this in the documentation below.
 ***
 
 ### Documentation ###
