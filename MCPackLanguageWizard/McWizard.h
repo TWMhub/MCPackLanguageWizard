@@ -10,6 +10,7 @@
 #include "rapidjson/document.h"
 #include "yaml-cpp/yaml.h"
 
+namespace fs = std::filesystem;
 
 namespace depozit {
 
@@ -73,4 +74,30 @@ namespace depozit {
 		std::wstring localeLine;
 		bool isEmpty;
 	};
+
+
+	class Wizard {
+	public:
+		//create class
+		Wizard();
+		Wizard(const fs::path&, const Flags&);
+
+		//init class
+		void init(const fs::path&, const Flags&);
+
+		//
+
+		
+	private:
+		//methods
+
+		//vars
+		std::vector<std::vector<TextLine>> textLineVec;
+		std::wstring completeFile;
+		fs::path targetDir;
+	};
 }
+
+// mods
+// kubejs\assets
+// config\ftbquests\quests
