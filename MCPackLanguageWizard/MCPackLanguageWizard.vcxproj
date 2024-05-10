@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="ClassTextLine.cpp" />
     <ClCompile Include="McWizard.cpp" />
+    <ClCompile Include="Wizard.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
