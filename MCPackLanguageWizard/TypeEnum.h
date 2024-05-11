@@ -2,7 +2,6 @@
 #define TYPEENUM_H
 
 namespace depozit {
-
 	//flags to FTBQuests
 	enum class Type {
 		title,
@@ -10,7 +9,6 @@ namespace depozit {
 		description,
 		unknown
 	};
-
 }
 
 #endif // !TYPEENUM_H

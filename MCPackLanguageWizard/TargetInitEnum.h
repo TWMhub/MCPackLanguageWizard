@@ -13,5 +13,4 @@ namespace depozit{
 	}
 }
 
-
 #endif // !TARGETINITENUM_H

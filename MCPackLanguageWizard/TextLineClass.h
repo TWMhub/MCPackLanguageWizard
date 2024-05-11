@@ -1,7 +1,6 @@
 #ifndef TEXTLINECLASS_H
 #define TEXTLINECLASS_H
 
-
 namespace depozit {
 
 	class TextLine {
@@ -41,7 +40,6 @@ namespace depozit {
 		std::wstring localeLine;
 		bool isEmpty;
 	};
-
 }
 
 #endif // !TEXTLINECLASS_H
