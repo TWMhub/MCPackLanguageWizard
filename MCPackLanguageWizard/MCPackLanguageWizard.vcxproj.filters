@@ -13,15 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\classes">
+      <UniqueIdentifier>{33a159a7-ce29-4ea8-bcfd-ab33e362305e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\enums">
+      <UniqueIdentifier>{97d1f93b-9f7a-4b94-bd3a-32fe9d8eca24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassTextLine.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="McWizard.cpp">
+    <ClCompile Include="AdditionalFuctions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Wizard.cpp">
+    <ClCompile Include="WizardClass.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,26 +35,26 @@
     <ClInclude Include="McWizard.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="TargetInitEnum.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ModeBuildEnum.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="TextLineClass.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="CompiledFileStruct.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="WizardClass.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="AdditionalFuctions.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="CompiledFileStruct.h">
+      <Filter>Файлы заголовков\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TextLineClass.h">
+      <Filter>Файлы заголовков\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="WizardClass.h">
+      <Filter>Файлы заголовков\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeBuildEnum.h">
+      <Filter>Файлы заголовков\enums</Filter>
+    </ClInclude>
     <ClInclude Include="TypeEnum.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetInitEnum.h">
+      <Filter>Файлы заголовков\enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

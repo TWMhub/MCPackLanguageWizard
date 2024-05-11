@@ -140,8 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassTextLine.cpp" />
-    <ClCompile Include="McWizard.cpp" />
-    <ClCompile Include="Wizard.cpp" />
+    <ClCompile Include="AdditionalFuctions.cpp" />
+    <ClCompile Include="WizardClass.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

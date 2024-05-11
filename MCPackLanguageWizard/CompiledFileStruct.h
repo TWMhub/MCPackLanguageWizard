@@ -1,7 +1,7 @@
 #ifndef COMPILEDFILESTRUCT_H
 #define COMPILEDFILESTRUCT_H
 
-namespace depozit {
+namespace depozit_wizard {
 	struct compiledFile {
 		fs::path pathToFile;						//in project (input)
 		int target;									//it is necessary to write to a specific file

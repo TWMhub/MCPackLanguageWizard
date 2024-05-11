@@ -1,6 +1,6 @@
 #include "McWizard.h"
 
-namespace depozit {
+namespace depozit_wizard {
 
 	//create class
 	TextLine::TextLine() {

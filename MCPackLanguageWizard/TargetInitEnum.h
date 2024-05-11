@@ -1,7 +1,7 @@
 #ifndef TARGETINITENUM_H
 #define TARGETINITENUM_H
 
-namespace depozit{
+namespace depozit_wizard {
 	namespace TargetInit {
 		enum {
 			ftbQuests = 1 << 0,	//FTB Quests in config/ftbquests

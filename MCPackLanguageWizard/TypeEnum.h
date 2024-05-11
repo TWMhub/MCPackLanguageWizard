@@ -1,7 +1,7 @@
 #ifndef TYPEENUM_H
 #define TYPEENUM_H
 
-namespace depozit {
+namespace depozit_wizard {
 	
 	enum class Type {	//flags to FTBQuests
 		title,			//title in quests

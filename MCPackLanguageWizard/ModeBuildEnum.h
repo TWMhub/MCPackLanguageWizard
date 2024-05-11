@@ -1,7 +1,7 @@
 #ifndef MODEBUILDENUM_H
 #define MODEBUILDENUM_H
 
-namespace depozit {
+namespace depozit_wizard {
 	namespace ModeBuildEnum {
 		enum {
 			toFile = 1 << 0,	// read modPack, parse it & write to working files

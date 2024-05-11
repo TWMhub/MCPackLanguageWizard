@@ -1,7 +1,7 @@
 #ifndef WIZARDCLASS_H
 #define WIZARDCLASS_H
 
-namespace depozit {
+namespace depozit_wizard {
 	class Wizard {
 	public:
 		//create class

@@ -1,7 +1,7 @@
 #ifndef ADDITIONALFUNCTIONS_H
 #define ADDITIONALFUNCTIONS_H
 
-namespace depozit {
+namespace depozit_wizard {
 	//lib info
 	std::string getLibInfo();
 	void coutLibInfo();

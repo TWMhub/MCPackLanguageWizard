@@ -1,7 +1,7 @@
 #ifndef TEXTLINECLASS_H
 #define TEXTLINECLASS_H
 
-namespace depozit {
+namespace depozit_wizard {
 
 	class TextLine {
 	public:
