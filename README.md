@@ -20,8 +20,8 @@ namespace dw = depozit_wizard;
 dw::strToWstr(const std::string& in); //-> std::wstring()
 dw::wstrToStr(const std::wstring& in); //-> std::wstring()
 ```
-
-### auxiliary class TextLine
+---
+### auxiliary class TextLine ###
 - this class stores: the original line, the translated line and the line number in the file.
 - There are 3 ways to create one. Here are the 2 main ones:
 ```cpp
@@ -48,3 +48,5 @@ classObject.clear();
 ```cpp
 classObject.analysisErrors(); -> std::wstring (no errors found || space-delimited enumeration of lost special characters)
 ```
+---
+### main class Wizard ###
