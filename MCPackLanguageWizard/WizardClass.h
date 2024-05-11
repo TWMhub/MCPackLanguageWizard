@@ -6,10 +6,10 @@ namespace depozit_wizard {
 	public:
 		//create class
 		Wizard();
-		Wizard(std::string, fs::path, int, bool);
+		Wizard(std::string, fs::path, int, bool); //int to uint
 
 		//init class
-		void init(std::string, fs::path, int, bool);
+		void init(std::string, fs::path, int, bool); // int to uint
 
 		//clear class
 		void clear();
