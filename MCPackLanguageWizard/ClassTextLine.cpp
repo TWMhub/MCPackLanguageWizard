@@ -69,24 +69,24 @@ namespace depozit {
 				return L"no errors found";
 			}
 
-				std::wstring out = L"";
-				std::wstring twoWchars = L"";
-				for (int i = 0; i < buffer.length(); i++) {
+			std::wstring out = L"";
+			std::wstring twoWchars = L"";
+			for (int i = 0; i < buffer.length(); i++) {
 
-					twoWchars.clear();
-					twoWchars.push_back(L'&');
-					twoWchars.push_back(buffer[i]); 
+				twoWchars.clear();
+				twoWchars.push_back(L'&');
+				twoWchars.push_back(buffer[i]); 
 
-					if (localeLine.find(twoWchars) == std::wstring::npos)
-						out += L" " + twoWchars;
-				}
+				if (localeLine.find(twoWchars) == std::wstring::npos)
+					out += L" " + twoWchars;
+			}
 
-				if (out.length() == 0) {
-					return L"no errors found";
-				}
-				else {
-					return L"errors:" + out;
-				}
+			if (out.length() == 0) {
+				return L"no errors found";
+			}
+			else {
+				return out;
+			}
 		}
 	}
 
