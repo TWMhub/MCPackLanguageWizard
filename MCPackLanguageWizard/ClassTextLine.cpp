@@ -7,34 +7,30 @@ namespace depozit {
 		initEmptyClass();
 	}
 
-	TextLine::TextLine(int pos, Type type, const std::wstring& origLine) {
+	TextLine::TextLine(int pos, const std::wstring& origLine) {
 		this->posInFile = pos;
-		this->type = type;
 		this->origLine = origLine;
 		this->localeLine = L"";
 		this->isEmpty = false;
 	};
 
-	TextLine::TextLine(int pos, Type type, const std::wstring& origLine, const std::wstring& localeLine) {
+	TextLine::TextLine(int pos, const std::wstring& origLine, const std::wstring& localeLine) {
 		this->posInFile = pos;
-		this->type = type;
 		this->origLine = origLine;
 		this->localeLine = localeLine;
 		this->isEmpty = false;
 	};
 
 	//init class
-	void TextLine::init(int pos, Type type, const std::wstring& origLine) {
+	void TextLine::init(int pos, const std::wstring& origLine) {
 		this->posInFile = pos;
-		this->type = type;
 		this->origLine = origLine;
 		this->localeLine = L"";
 		this->isEmpty = false;
 	};
 
-	void TextLine::init(int pos, Type type, const std::wstring& origLine, const std::wstring& localeLine) {
+	void TextLine::init(int pos, const std::wstring& origLine, const std::wstring& localeLine) {
 		this->posInFile = pos;
-		this->type = type;
 		this->origLine = origLine;
 		this->localeLine = localeLine;
 		this->isEmpty = false;
@@ -51,10 +47,6 @@ namespace depozit {
 		return this->posInFile;
 	}
 
-	Type TextLine::getType() {
-		return this->type;
-	}
-
 	std::wstring TextLine::getOrigLine() {
 		return this->origLine;
 	}
@@ -63,30 +55,39 @@ namespace depozit {
 		return this->localeLine;
 	}
 
-	std::wstring TextLine::getFullLine() {
-		return std::to_wstring(this->posInFile) + L"\n" + typeToWstring(this->type) + L"\n" + this->origLine + L"\n" + this->localeLine;
-	}
+	std::wstring TextLine::analysisErrors() {
+		if (!isEmpty && localeLine.length() > 0) {
+			std::wstring buffer = L"";
 
-	std::vector<std::wstring> TextLine::getFullLineByVec() {
-		std::vector<std::wstring> out;
-		out.push_back(std::to_wstring(this->posInFile));
-		out.push_back(typeToWstring(this->type));
-		out.push_back(this->origLine);
-		out.push_back(this->localeLine);
-		return out;
-	}
+			for (int i = 0; i < origLine.length() - 1; i++) {
+				if (origLine[i] == L'&') {
+					buffer.push_back(origLine[i + 1]);
+				}
+			}
 
-	void TextLine::getParamsByLink(int& pos, Type& type, std::wstring& origLine) {
-		pos = this->posInFile;
-		type = this->type;
-		origLine = this->origLine;
-	}
+			if (buffer.length() == 0) {
+				return L"no errors found";
+			}
 
-	void TextLine::getParamsByLink(int& pos, Type& type, std::wstring& origLine, std::wstring& localeLine) {
-		pos = this->posInFile;
-		type = this->type;
-		origLine = this->origLine;
-		localeLine = this->localeLine;
+				std::wstring out = L"";
+				std::wstring twoWchars = L"";
+				for (int i = 0; i < buffer.length(); i++) {
+
+					twoWchars.clear();
+					twoWchars.push_back(L'&');
+					twoWchars.push_back(buffer[i]); 
+
+					if (localeLine.find(twoWchars) == std::wstring::npos)
+						out += L" " + twoWchars;
+				}
+
+				if (out.length() == 0) {
+					return L"no errors found";
+				}
+				else {
+					return L"errors:" + out;
+				}
+		}
 	}
 
 	//clear class
@@ -96,7 +97,6 @@ namespace depozit {
 
 	void TextLine::initEmptyClass() {
 		this->posInFile = -1;
-		this->type = Type::unknown;
 		this->origLine = L"";
 		this->localeLine = L"";
 		this->isEmpty = true;
