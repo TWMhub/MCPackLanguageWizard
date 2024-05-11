@@ -6,12 +6,12 @@ namespace depozit {
 		clear();
 	};
 
-	Wizard::Wizard(std::string name, fs::path pathToModPack, TargetInit flag, bool needInitProject) {
+	Wizard::Wizard(std::string name, fs::path pathToModPack, int flag, bool needInitProject) {
 		init(name, pathToModPack, flag, needInitProject);
 	};
 
 	//init class
-	void Wizard::init(std::string name, fs::path pathToModPack, TargetInit flag, bool needInitProject) {
+	void Wizard::init(std::string name, fs::path pathToModPack, int flag, bool needInitProject) {
 		//initial settings
 		clear();
 
@@ -37,22 +37,22 @@ namespace depozit {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::ftbQuests);
-			parseQuestDir();
+			//parseQuestDir();
 		}
 		if (int(flag) & int(TargetInit::kubeJS)) {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::kubeJS);
-			parseKubeJsDir();
+			//parseKubeJsDir();
 		}
 		if (int(flag) & int(TargetInit::modWLoc)) {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::modWLoc);
-			parseModWLocDir();
+			//parseModWLocDir();
 		}
 		if (int(flag) & int(TargetInit::modWoLoc)) {
-			parseModWoLocDir();
+			//parseModWoLocDir();
 			this->counterParams++;
 		}
 
@@ -71,7 +71,6 @@ namespace depozit {
 
 	//clear class
 	void Wizard::clear() {
-		this->projectPath.clear();
 		this->nameProject.clear();
 		this->arrayCompiledFiles.clear();
 		this->isEmpty = true;
@@ -82,7 +81,7 @@ namespace depozit {
 		return fs::is_directory(targetPath);
 	}
 
-	void Wizard::initProject(fs::path path, TargetInit flag = TargetInit::unknown) {
+	void Wizard::initProject(fs::path path, int flag = TargetInit::unknown) {
 		fs::create_directories(nameProject + "\\input");
 		fs::create_directories(nameProject + "\\wf");
 		fs::create_directories(nameProject + "\\output");
@@ -103,11 +102,6 @@ namespace depozit {
 		}
 	}
 
-	void parseQuest();
-	void parseKubeJs();
-	void parseModWLoc();
-	void parseModWoLoc() {
-		std::cout << "the library does not process mods without localization support yet\n";
-	}
+	
 
 }

@@ -40,6 +40,12 @@ namespace depozit {
 		this->isEmpty = false;
 	};
 
+
+	//add locale lines
+	void TextLine::addLocaleLine(const std::wstring& localeLine) {
+		this->localeLine = localeLine;
+	}
+
 	//get info from class
 	int TextLine::getPos() {
 		return this->posInFile;

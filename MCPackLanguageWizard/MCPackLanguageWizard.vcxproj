@@ -129,7 +129,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AdditionalFuctions.h" />
+    <ClInclude Include="CompiledFileStruct.h" />
+    <ClInclude Include="ModeBuildEnum.h" />
+    <ClInclude Include="TargetInitEnum.h" />
     <ClInclude Include="McWizard.h" />
+    <ClInclude Include="TextLineClass.h" />
+    <ClInclude Include="TypeEnum.h" />
+    <ClInclude Include="WizardClass.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassTextLine.cpp" />
