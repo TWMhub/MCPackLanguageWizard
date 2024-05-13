@@ -56,38 +56,41 @@ namespace depozit_wizard {
 	}
 
 	std::wstring TextLine::analysisErrors() {
-		if (!isEmpty && localeLine.length() > 0) {
-			std::wstring buffer = L"";
+		
+		if (!(!isEmpty && localeLine.length() > 0)) 
+			return L"";
+		
+		std::wstring buffer = L"";
 
-			for (int i = 0; i < origLine.length() - 1; i++) {
-				if (origLine[i] == L'&') {
-					buffer.push_back(origLine[i + 1]);
-				}
-			}
-
-			if (buffer.length() == 0) {
-				return L"no errors found";
-			}
-
-			std::wstring out = L"";
-			std::wstring twoWchars = L"";
-			for (int i = 0; i < buffer.length(); i++) {
-
-				twoWchars.clear();
-				twoWchars.push_back(L'&');
-				twoWchars.push_back(buffer[i]); 
-
-				if (localeLine.find(twoWchars) == std::wstring::npos)
-					out += L" " + twoWchars;
-			}
-
-			if (out.length() == 0) {
-				return L"no errors found";
-			}
-			else {
-				return out;
+		for (int i = 0; i < origLine.length() - 1; i++) {
+			if (origLine[i] == L'&') {
+				buffer.push_back(origLine[i + 1]);
 			}
 		}
+
+		if (buffer.length() == 0) {
+			return L"no errors found";
+		}
+
+		std::wstring out = L"";
+		std::wstring twoWchars = L"";
+		for (int i = 0; i < buffer.length(); i++) {
+
+			twoWchars.clear();
+			twoWchars.push_back(L'&');
+			twoWchars.push_back(buffer[i]); 
+
+			if (localeLine.find(twoWchars) == std::wstring::npos)
+				out += L" " + twoWchars;
+		}
+
+		if (out.length() == 0) {
+			return L"no errors found";
+		}
+		else {
+			return out;
+		}
+		
 	}
 
 	//clear class

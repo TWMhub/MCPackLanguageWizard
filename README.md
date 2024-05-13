@@ -23,16 +23,20 @@ dw::wstrToStr(const std::wstring& in); //-> std::wstring()
 ---
 ### auxiliary class TextLine ###
 - this class stores: the original line, the translated line and the line number in the file.
-- There are 3 ways to create one. Here are the 2 main ones:
+- there are 3 ways to create one. Here are the 2 main ones:
 ```cpp
 dw::TextLine(int, const std::wstring&);
 dw::TextLine(int, const std::wstring&, const std::wstring&);
 ```
-- There is also the 3rd way, but further you will need to initialise the class to a working state:
+- there is also the 3rd way, but further you will need to initialise the class to a working state:
 ```cpp
 dw::TextLine() classObject;
 classObject.init(int, const std::wstring&);
 classObject.init(int, const std::wstring&, const std::wstring&);
+```
+- after initialization, you can add a line with a translation, if you did not do it during initialization
+```cpp
+classObject.addLocaleLine(const std::wstring&);
 ```
 - all the data you entered can be retrieved:
 ```cpp
@@ -44,7 +48,7 @@ classObject.getLocaleLine(); //-> std::wstring()
 ```cpp
 classObject.clear();
 ```
-- Since the library is tailored to work with quests from the FTBQuest mod, there is a function to check for special characters. if the translation was lost special characters you will know:
+- since the library is tailored to work with quests from the FTBQuest mod, there is a function to check for special characters. if the translation was lost special characters you will know:
 ```cpp
 classObject.analysisErrors(); -> std::wstring (no errors found || space-delimited enumeration of lost special characters)
 ```
