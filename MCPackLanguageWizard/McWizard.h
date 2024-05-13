@@ -9,6 +9,10 @@
 #include <filesystem>
 #include <vector>
 
+//namespace
+namespace fs = std::filesystem;
+namespace depozit_wizard {};
+
 //third-party libraries
 #include "rapidjson/document.h"
 #include "yaml-cpp/yaml.h"
@@ -26,8 +30,5 @@
 #include "CompiledFileStruct.h"
 #include "WizardClass.h"
 
-//namespace
-namespace fs = std::filesystem;
-namespace depozit_wizard {}; 
 
 #endif

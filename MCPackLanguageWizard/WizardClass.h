@@ -2,7 +2,8 @@
 #define WIZARDCLASS_H
 
 namespace depozit_wizard {
-	class Wizard :private DataProcessor {
+
+	class Wizard : private DataProcessor, private FileHandler {
 	public:
 		//create class
 		Wizard();
@@ -48,5 +49,3 @@ namespace depozit_wizard {
 }
 
 #endif // !WIZARDCLASS_H
-
-// можно вынести за скобки: парсер для разных файлов

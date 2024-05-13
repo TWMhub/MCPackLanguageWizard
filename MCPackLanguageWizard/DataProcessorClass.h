@@ -1,22 +1,29 @@
-#ifndef DATAPROCESSOR_H
-#define DATAPROCESSOR_H
+#ifndef DATAPROCESSORCLASS_H
+#define DATAPROCESSORCLASS_H
 
 namespace depozit_wizard {
 
 	class DataProcessor {
 	protected:
 		bool isDir(fs::path); //check if it is a directory
+
 		//parsing methods
 		std::vector<std::wstring> getFile(fs::path);
+
 		//ftb quest methods
-		std::vector<compiledFile> parseFtbQuestFile(std::vector<std::wstring>);
+		compiledFile parseFtbQuestFile(fs::path);
+		compiledFile parseFtbQuestFile(std::vector<std::wstring>, fs::path);
+
 		//kubejs methods
-		std::vector<fs::path> getTranslatableKubeJsFiles(fs::path);
-		std::vector<compiledFile> parseKubeJsFile(std::vector<std::wstring>);
+		std::vector<fs::path> getTranslatableKubeJsFiles(fs::path); //path to modpack
+		compiledFile parseKubeJsFile(std::vector<std::wstring>, fs::path);
+
 		//mod 
 		bool isTranslatableMod(fs::path);
 		std::vector<fs::path> getTranslatableMods(fs::path);
 		std::vector<compiledFile> parseModFile(std::vector<std::wstring>);
+
+		std::vector<compiledFile> getWorkingFiles(fs::path);
 
 	};
 }

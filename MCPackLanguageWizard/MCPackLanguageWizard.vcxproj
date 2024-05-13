@@ -132,9 +132,9 @@
     <ClInclude Include="AdditionalFuctions.h" />
     <ClInclude Include="BuildTypeEnum.h" />
     <ClInclude Include="CompiledFileStruct.h" />
-    <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="FileHandlerClass.h" />
     <ClInclude Include="ModeBuildEnum.h" />
-    <ClInclude Include="DataProcessor.h" />
+    <ClInclude Include="DataProcessorClass.h" />
     <ClInclude Include="TargetInitEnum.h" />
     <ClInclude Include="McWizard.h" />
     <ClInclude Include="TextLineClass.h" />
@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="ClassTextLine.cpp" />
     <ClCompile Include="AdditionalFuctions.cpp" />
+    <ClCompile Include="DataProcessorClass.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
