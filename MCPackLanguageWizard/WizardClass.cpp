@@ -6,12 +6,12 @@ namespace depozit_wizard {
 		clear();
 	};
 
-	Wizard::Wizard(std::string name, fs::path pathToModPack, int flag, bool needInitProject) {
+	Wizard::Wizard(std::string name, fs::path pathToModPack, unsigned short flag, bool needInitProject) {
 		init(name, pathToModPack, flag, needInitProject);
 	};
 
 	//init class
-	void Wizard::init(std::string name, fs::path pathToModPack, int flag, bool needInitProject) {
+	void Wizard::init(std::string name, fs::path pathToModPack, unsigned short flag, bool needInitProject) {
 		//initial settings
 		clear();
 
@@ -33,25 +33,25 @@ namespace depozit_wizard {
 		}
 
 		//checking flags
-		if (int(flag) & int(TargetInit::ftbQuests)) {
+		if (flag & TargetInit::ftbQuests) {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::ftbQuests);
 			//parseQuestDir();
 		}
-		if (int(flag) & int(TargetInit::kubeJS)) {
+		if (flag & TargetInit::kubeJS) {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::kubeJS);
 			//parseKubeJsDir();
 		}
-		if (int(flag) & int(TargetInit::modWLoc)) {
+		if (flag & TargetInit::modWLoc) {
 			this->counterParams++;
 			if (needInitProject)
 				this->initProject(pathToModPack, TargetInit::modWLoc);
 			//parseModWLocDir();
 		}
-		if (int(flag) & int(TargetInit::modWoLoc)) {
+		if (flag & TargetInit::modWoLoc) {
 			//parseModWoLocDir();
 			this->counterParams++;
 		}
@@ -81,20 +81,20 @@ namespace depozit_wizard {
 		return fs::is_directory(targetPath);
 	}
 
-	void Wizard::initProject(fs::path path, int flag = TargetInit::unknown) {
+	void Wizard::initProject(fs::path path, unsigned short flag = TargetInit::unknown) {
 		fs::create_directories(nameProject + "\\input");
 		fs::create_directories(nameProject + "\\wf");
 		fs::create_directories(nameProject + "\\output");
 
 
 		try {
-			if (int(flag) & int(TargetInit::ftbQuests))
+			if (flag & TargetInit::ftbQuests)
 				fs::copy(path / "\\config\\ftbquests\\quests", nameProject + "\\FTBQuests", fs::copy_options::overwrite_existing);
 
-			if (int(flag) & int(TargetInit::kubeJS))
+			if (flag & TargetInit::kubeJS)
 				fs::copy(path / "\\kubejs\\assets", nameProject + "\\kubeJs", fs::copy_options::overwrite_existing);
 
-			if (int(flag) & int(TargetInit::modWLoc))
+			if (flag & TargetInit::modWLoc)
 				fs::copy(path / "\\mods", nameProject + "\\mods", fs::copy_options::overwrite_existing);
 		}
 		catch (const fs::filesystem_error& e) {

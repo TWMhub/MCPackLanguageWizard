@@ -1,4 +1,5 @@
 countLines : 12
+type : FTBQuest
 translations:
   - path: file1.txt
     entries:

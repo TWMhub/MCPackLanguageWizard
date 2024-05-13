@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AdditionalFuctions.h" />
+    <ClInclude Include="BuildTypeEnum.h" />
     <ClInclude Include="CompiledFileStruct.h" />
     <ClInclude Include="ModeBuildEnum.h" />
     <ClInclude Include="TargetInitEnum.h" />

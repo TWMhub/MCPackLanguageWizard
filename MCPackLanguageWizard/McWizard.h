@@ -1,6 +1,7 @@
 #ifndef MCWIZARD_H
 #define MCWIZARD_H
 
+//libs
 //standard libraries
 #include <iostream>
 #include <string>
@@ -8,13 +9,12 @@
 #include <filesystem>
 #include <vector>
 
-namespace fs = std::filesystem;
-
 //third-party libraries
 #include "rapidjson/document.h"
 #include "yaml-cpp/yaml.h"
 
 //another headers
+#include "BuildTypeEnum.h"
 #include "TypeEnum.h"
 #include "TargetInitEnum.h"
 #include "ModeBuildEnum.h"
@@ -22,5 +22,9 @@ namespace fs = std::filesystem;
 #include "TextLineClass.h"
 #include "CompiledFileStruct.h"
 #include "WizardClass.h"
+
+//namespace
+namespace fs = std::filesystem;
+namespace depozit_wizard {}; 
 
 #endif
