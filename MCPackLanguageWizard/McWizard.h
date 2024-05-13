@@ -12,6 +12,7 @@
 //third-party libraries
 #include "rapidjson/document.h"
 #include "yaml-cpp/yaml.h"
+#include "archive.h"
 
 //another headers
 #include "BuildTypeEnum.h"
@@ -19,6 +20,8 @@
 #include "TargetInitEnum.h"
 #include "ModeBuildEnum.h"
 #include "AdditionalFuctions.h"
+#include "DataProcessorClass.h"
+#include "FileHandlerClass.h"
 #include "TextLineClass.h"
 #include "CompiledFileStruct.h"
 #include "WizardClass.h"

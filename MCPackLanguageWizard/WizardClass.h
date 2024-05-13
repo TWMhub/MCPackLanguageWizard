@@ -2,7 +2,7 @@
 #define WIZARDCLASS_H
 
 namespace depozit_wizard {
-	class Wizard {
+	class Wizard :private DataProcessor {
 	public:
 		//create class
 		Wizard();
@@ -19,29 +19,26 @@ namespace depozit_wizard {
 		//clear class
 		void clear();
 
+		std::vector<compiledFile> getAllFilesData();
+		std::string getNameProject();
+
 		//write strings to file (modpack or working files)
 		void build(unsigned short);
 
 	private:
 		//methods
-		bool isDir(fs::path);
-
+		
 		//methods with project
-		void initProject(fs::path, unsigned short);//if you already have a project with input, output, wf folders, then do not call the function
-		bool hasProject(std::string);
+		void initWorkingProject(fs::path, unsigned short); //initialises the project in the folder with the program for further work
+		bool hasProject(std::string); //checks if a project with this name exists
 
-		//parsing methods
-		std::vector<std::wstring> getFile(fs::path); 
-		//ftb quest methods
-		std::vector<compiledFile> parseFtbQuestFile(std::vector<std::wstring>);
-		//kubejs methods
-		std::vector<fs::path> getTranslatableKubeJsFiles(fs::path);
-		std::vector<compiledFile> parseKubeJsFile(std::vector<std::wstring>);
-		//mod 
-		bool isTranslatableMod(fs::path);
-		std::vector<fs::path> getTranslatableMods(fs::path);
-		std::vector<compiledFile> parseModFile(std::vector<std::wstring>);
 
+		void addFtbQuestData(fs::path); //reads all data from ftb quest files
+		void addKubeJsData(fs::path); //reads all data from kube js files
+		void addModsData(fs::path); //reads all data from mods files
+		void getDataFromWorkingFiles();
+
+		
 		//vars
 		std::vector<compiledFile> arrayCompiledFiles;
 		bool isEmpty;
@@ -52,3 +49,4 @@ namespace depozit_wizard {
 
 #endif // !WIZARDCLASS_H
 
+// можно вынести за скобки: парсер для разных файлов

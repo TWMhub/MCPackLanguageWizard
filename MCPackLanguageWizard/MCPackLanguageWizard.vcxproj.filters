@@ -27,9 +27,6 @@
     <ClCompile Include="AdditionalFuctions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WizardClass.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="McWizard.h">
@@ -58,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="BuildTypeEnum.h">
       <Filter>Файлы заголовков\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProcessor.h">
+      <Filter>Файлы заголовков\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHandler.h">
+      <Filter>Файлы заголовков\classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
