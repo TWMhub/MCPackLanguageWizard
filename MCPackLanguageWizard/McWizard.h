@@ -15,8 +15,8 @@ namespace depozit_wizard {};
 
 //third-party libraries
 #include "rapidjson/document.h"
-#include "yaml-cpp/yaml.h"
-#include "archive.h"
+#include "yaml-cpp/yaml.h"	
+#include "zip.h"
 
 //another headers
 #include "BuildTypeEnum.h"

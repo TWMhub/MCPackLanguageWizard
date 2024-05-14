@@ -20,7 +20,7 @@ namespace depozit_wizard {
 		compiledFile parseKubeJsFile(std::vector<std::wstring>, fs::path);
 
 		//mod 
-		bool isTranslatableMod(fs::path);
+		bool isTranslatableMod(zip_t*, const std::string& parent_folder = "");
 		std::vector<fs::path> getTranslatableMods(fs::path);
 		std::vector<compiledFile> parseModFile(std::vector<std::wstring>);
 

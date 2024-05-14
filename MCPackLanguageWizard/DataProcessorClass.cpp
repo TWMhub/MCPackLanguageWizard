@@ -100,4 +100,15 @@ namespace depozit_wizard {
 		return out;
 	}
 
+	bool DataProcessor::isTranslatableMod(zip_t* jar, const std::string& parent_folder = "") {
+		int num_entr = zip_get_num_entries(jar, 0);
+		for (int i = 0; i < num_entr; i++) {
+			zip_stat_t stat;
+			zip_stat_index(jar, i, 0, &stat);
+
+			if (stat.name[strlen(stat.name) - 1] == '/') {
+			}
+		}
+	}
+
 }
