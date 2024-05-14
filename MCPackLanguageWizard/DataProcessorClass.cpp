@@ -6,7 +6,7 @@ namespace depozit_wizard {
 		return fs::is_directory(path);
 	}
 
-	std::vector<std::wstring> DataProcessor::getFile(fs::path path) {
+	std::vector<std::wstring> DataProcessor::getFileByVecWstring(fs::path path) {
 		std::wifstream input(path);
 		std::vector<std::wstring> out;
 		std::wstring line;
@@ -16,8 +16,18 @@ namespace depozit_wizard {
 		return out;
 	}
 
+	std::wstring DataProcessor::getFileByWstring(fs::path path) {
+		std::wifstream input(path);
+		std::wstring out;
+		std::wstring line;
+		while (std::getline(input,line)){
+			out += line + L"\n";
+		}
+		return out;
+	}
+
 	compiledFile DataProcessor::parseFtbQuestFile(fs::path path) {
-		return this->parseFtbQuestFile(this->getFile(path), path);
+		return this->parseFtbQuestFile(this->getFileByVecWstring(path), path);
 	}
 
 	compiledFile DataProcessor::parseFtbQuestFile(std::vector<std::wstring> input, fs::path path) {

@@ -9,7 +9,8 @@ namespace depozit_wizard {
 		bool isDir(fs::path); //check if it is a directory
 
 		//parsing methods
-		std::vector<std::wstring> getFile(fs::path);
+		std::vector<std::wstring> getFileByVecWstring(fs::path);
+		std::wstring getFileByWstring(fs::path);
 
 		//ftb quest methods
 		compiledFile parseFtbQuestFile(fs::path);
