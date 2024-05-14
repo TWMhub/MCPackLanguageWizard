@@ -1,5 +1,6 @@
 #ifndef ADDITIONALFUNCTIONS_H
 #define ADDITIONALFUNCTIONS_H
+#include "McWizard.h"
 
 namespace depozit_wizard {
 	//lib info

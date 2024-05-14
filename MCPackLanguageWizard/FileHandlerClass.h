@@ -1,5 +1,6 @@
 #ifndef FILEHANDLERCLASS_H
 #define FILEHANDLERCLASS_H
+#include "McWizard.h"
 
 namespace depozit_wizard {
 

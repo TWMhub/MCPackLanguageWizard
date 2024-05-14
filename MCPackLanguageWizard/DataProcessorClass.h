@@ -1,5 +1,6 @@
 #ifndef DATAPROCESSORCLASS_H
 #define DATAPROCESSORCLASS_H
+#include "McWizard.h"
 
 namespace depozit_wizard {
 

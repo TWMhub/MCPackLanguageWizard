@@ -1,5 +1,6 @@
 #ifndef WIZARDCLASS_H
 #define WIZARDCLASS_H
+#include "McWizard.h"
 
 namespace depozit_wizard {
 

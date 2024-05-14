@@ -38,7 +38,6 @@ namespace depozit_wizard {
 		}
 
 		for (iterator; iterator < input.size(); iterator++) {
-
 			if (input[iterator].find(L"title") != std::wstring::npos || input[iterator].find(L"subtitle") != std::wstring::npos) {
 				if (input[iterator].find(L"{") != std::wstring::npos) {
 
@@ -50,7 +49,6 @@ namespace depozit_wizard {
 
 				}
 			}
-
 			if (input[iterator].find(L"description") != std::wstring::npos) {
 				for (int d = iterator; d < input.size(); d++) {
 					if (input[d].find(L"\"") != std::wstring::npos) {
@@ -68,7 +66,6 @@ namespace depozit_wizard {
 			}
 
 		}
-
 		return out;
 	}
 
@@ -84,7 +81,6 @@ namespace depozit_wizard {
 	}
 
 	compiledFile DataProcessor::parseKubeJsFile(std::vector<std::wstring> input, fs::path path) {
-
 		compiledFile out;
 		out.target = TargetInit::kubeJS;
 		out.pathToFile = path;
@@ -101,7 +97,7 @@ namespace depozit_wizard {
 				out.compiledTextLines.push_back(TextLine{ i,input[i].substr(startBorder + 1,startBorder - endBorder - 1) });
 			}
 		}
-
 		return out;
 	}
+
 }
