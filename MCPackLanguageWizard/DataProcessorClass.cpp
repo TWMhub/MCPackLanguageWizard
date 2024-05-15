@@ -110,7 +110,7 @@ namespace depozit_wizard {
 		return out;
 	}
 
-	bool DataProcessor::isTranslatableMod(zip_t* jar, const std::string& parent_folder = "") {
+	bool DataProcessor::isTranslatableMod(zip_t* jar, const std::string& parent_folder = "") { //in process 
 		int num_entr = zip_get_num_entries(jar, 0);
 		for (int i = 0; i < num_entr; i++) {
 			zip_stat_t stat;
@@ -120,5 +120,7 @@ namespace depozit_wizard {
 			}
 		}
 	}
+
+
 
 }

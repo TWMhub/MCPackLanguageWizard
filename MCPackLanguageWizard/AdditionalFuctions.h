@@ -11,6 +11,8 @@ namespace depozit_wizard {
 	std::wstring strToWstr(const std::string&);
 	std::string wstrToStr(const std::wstring&);
 	std::wstring typeToWstring(const Type&);
+
+	
 }
 
 #endif // !ADDITIONALFUNCTIONS_H

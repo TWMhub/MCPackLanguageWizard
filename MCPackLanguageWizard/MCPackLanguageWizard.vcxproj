@@ -145,6 +145,7 @@
     <ClCompile Include="ClassTextLine.cpp" />
     <ClCompile Include="AdditionalFuctions.cpp" />
     <ClCompile Include="DataProcessorClass.cpp" />
+    <ClCompile Include="FileHandlerClass.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

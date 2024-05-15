@@ -18,6 +18,13 @@ namespace depozit_wizard {
 		void init(std::string, unsigned short);
 		void init(std::string);
 
+		//methods with flags
+		unsigned short getTargetFlags();
+		void printTargetFlags();
+		void addTargetFlags(unsigned int);
+		void removeTargetFlags(unsigned int);
+
+
 		//clear class
 		void clear();
 
@@ -46,6 +53,7 @@ namespace depozit_wizard {
 		bool isEmpty;
 		int counterParams;
 		std::string nameProject;
+
 	};
 }
 
