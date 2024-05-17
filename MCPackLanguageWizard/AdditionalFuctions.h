@@ -5,7 +5,7 @@
 namespace depozit_wizard {
 	//lib info
 	std::string getLibInfo();
-	void coutLibInfo();
+	void printLibInfo();
 
 	//helpful methods
 	std::wstring strToWstr(const std::string&);

@@ -55,20 +55,20 @@ namespace depozit_wizard {
 		return this->localeLine;
 	}
 
-	std::wstring TextLine::analysisErrors() {
+	std::vector<std::wstring> TextLine::analysisErrors() {
 		
-		if (!(!isEmpty && localeLine.length() > 0)) 
+		if (!(!isEmpty || localeLine.length() > 0)) //check if strings can be checked at all
 			return L"";
 		
 		std::wstring buffer = L"";
 
-		for (int i = 0; i < origLine.length() - 1; i++) {
+		for (int i = 0; i < origLine.length() - 1; i++) { //search for all special characters in the original string
 			if (origLine[i] == L'&') {
 				buffer.push_back(origLine[i + 1]);
 			}
 		}
 
-		if (buffer.length() == 0) {
+		if (buffer.length() == 0) { //if there are no special characters at all
 			return L"no errors found";
 		}
 
