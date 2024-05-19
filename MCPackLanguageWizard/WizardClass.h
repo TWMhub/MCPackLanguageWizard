@@ -1,6 +1,8 @@
 #ifndef WIZARDCLASS_H
 #define WIZARDCLASS_H
 #include "McWizard.h"
+#include "DataProcessorClass.h"
+#include "TargetInitEnum.h"
 
 namespace depozit_wizard {
 

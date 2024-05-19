@@ -1,6 +1,6 @@
 #ifndef TEXTLINECLASS_H
 #define TEXTLINECLASS_H
-#include "McWizard.h"
+#include <string>
 
 namespace depozit_wizard {
 

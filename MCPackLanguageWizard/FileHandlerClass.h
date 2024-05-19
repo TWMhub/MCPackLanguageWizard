@@ -1,11 +1,11 @@
 #ifndef FILEHANDLERCLASS_H
 #define FILEHANDLERCLASS_H
-#include "McWizard.h"
+#include "FileHadler.h"
 
 namespace depozit_wizard {
 
 	class FileHandler {
-	protected:
+	public:
 		//json
 		void initJson(std::string, fs::path, unsigned short); //initialise the project settings base file with all input data
 		void addJsonFlag(unsigned short); //adds flags to the project
@@ -15,6 +15,10 @@ namespace depozit_wizard {
 		//YAML
 		void writeYAMLFiles(const std::vector<compiledFile>&);
 		std::vector<compiledFile> getYAMLFiles();
+
+		//settings
+
+		//working files
 	};
 
 }

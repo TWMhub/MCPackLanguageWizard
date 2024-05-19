@@ -19,7 +19,7 @@ namespace depozit_wizard {
 
         //working with Flags
         std::vector<std::string> stringFlags;
-        for (int iFlag = TargetInit::ftbQuests; iFlag != TargetInit::modWoLoc; iFlag++) {
+        for (int iFlag = TargetInit::ftbQuests; iFlag != TargetInit::kubeJS; iFlag++) {
             if (flag & iFlag) {
                 auto it = TargetInit::enumToStringMap.find(iFlag);
                 if (it != TargetInit::enumToStringMap.end()) {

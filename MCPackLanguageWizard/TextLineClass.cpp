@@ -1,4 +1,4 @@
-#include "McWizard.h"
+#include "TextLineClass.h"
 
 namespace depozit_wizard {
 
@@ -55,7 +55,7 @@ namespace depozit_wizard {
 		return this->localeLine;
 	}
 
-	std::vector<std::wstring> TextLine::analysisErrors() {
+	std::wstring TextLine::analysisErrors() {
 		
 		if (!(!isEmpty || localeLine.length() > 0)) //check if strings can be checked at all
 			return L"";

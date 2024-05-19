@@ -1,6 +1,6 @@
 #ifndef COMPILEDFILESTRUCT_H
 #define COMPILEDFILESTRUCT_H
-#include "McWizard.h"
+#include "TextLineClass.h"
 
 namespace depozit_wizard {
 	struct compiledFile {

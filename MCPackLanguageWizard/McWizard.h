@@ -2,7 +2,7 @@
 #define MCWIZARD_H
 
 //libs
-//standard libraries
+//std
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -22,10 +22,6 @@ namespace depozit_wizard {};
 #include "zip.h"
 
 //another headers
-#include "BuildTypeEnum.h"
-#include "TypeEnum.h"
-#include "TargetInitEnum.h"
-#include "ModeBuildEnum.h"
 #include "AdditionalFuctions.h"
 #include "DataProcessorClass.h"
 #include "FileHandlerClass.h"
