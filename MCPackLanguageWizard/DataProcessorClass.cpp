@@ -1,4 +1,4 @@
-#include "McWizard.h"
+#include "DataProcessorClass.h"
 
 namespace depozit_wizard {
 

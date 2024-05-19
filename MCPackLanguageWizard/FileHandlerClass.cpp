@@ -1,4 +1,4 @@
-#include "McWizard.h"
+#include "FileHandlerClass.h"
 
 namespace depozit_wizard {
 

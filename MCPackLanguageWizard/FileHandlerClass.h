@@ -1,10 +1,11 @@
 #ifndef FILEHANDLERCLASS_H
 #define FILEHANDLERCLASS_H
 #include "FileHadler.h"
+#include "CompiledFileStruct.h"
 
 namespace depozit_wizard {
 
-	class FileHandler {
+	class FileHandler {//a set of methods for working with files packed into a class for convenience
 	public:
 		//json
 		void initJson(std::string, fs::path, unsigned short); //initialise the project settings base file with all input data
@@ -19,6 +20,8 @@ namespace depozit_wizard {
 		//settings
 
 		//working files
+
+		//read&write files
 	};
 
 }

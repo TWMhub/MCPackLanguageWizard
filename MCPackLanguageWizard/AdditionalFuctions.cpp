@@ -1,4 +1,4 @@
-#include "McWizard.h"
+#include "AdditionalFuctions.h"
 
 namespace depozit_wizard {
 	//lib info

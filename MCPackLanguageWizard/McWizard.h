@@ -22,12 +22,8 @@ namespace depozit_wizard {};
 #include "zip.h"
 
 //another headers
-#include "AdditionalFuctions.h"
-#include "DataProcessorClass.h"
-#include "FileHandlerClass.h"
-#include "TextLineClass.h"
-#include "CompiledFileStruct.h"
 #include "WizardClass.h"
+#include "AdditionalFuctions.h"
 
 
 #endif
