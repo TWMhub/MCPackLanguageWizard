@@ -1,6 +1,7 @@
 #ifndef TEXTLINECLASS_H
 #define TEXTLINECLASS_H
 #include <string>
+#include <vector>
 
 namespace depozit_wizard {
 
@@ -24,7 +25,7 @@ namespace depozit_wizard {
 		std::wstring getLocaleLine();
 
 		//search for a suspected error
-		std::wstring analysisErrors();
+		std::vector<std::wstring> analysisErrors();
 
 		//clear class
 		void clear();
