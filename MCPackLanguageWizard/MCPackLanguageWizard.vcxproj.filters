@@ -19,25 +19,25 @@
     <Filter Include="Файлы заголовков\enums">
       <UniqueIdentifier>{97d1f93b-9f7a-4b94-bd3a-32fe9d8eca24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\include files">
+      <UniqueIdentifier>{42e7211e-8912-43b0-b253-479f96c011e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ClassTextLine.cpp">
+    <ClCompile Include="TextLineClass.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="AdditionalFuctions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DataProcessorClass.cpp">
+    <ClCompile Include="FileHandlerClass.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileHandlerClass.cpp">
+    <ClCompile Include="WizardClass.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="McWizard.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="AdditionalFuctions.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -50,23 +50,17 @@
     <ClInclude Include="WizardClass.h">
       <Filter>Файлы заголовков\classes</Filter>
     </ClInclude>
-    <ClInclude Include="ModeBuildEnum.h">
-      <Filter>Файлы заголовков\enums</Filter>
-    </ClInclude>
-    <ClInclude Include="TypeEnum.h">
-      <Filter>Файлы заголовков\enums</Filter>
-    </ClInclude>
     <ClInclude Include="TargetInitEnum.h">
       <Filter>Файлы заголовков\enums</Filter>
     </ClInclude>
-    <ClInclude Include="BuildTypeEnum.h">
-      <Filter>Файлы заголовков\enums</Filter>
-    </ClInclude>
-    <ClInclude Include="DataProcessorClass.h">
-      <Filter>Файлы заголовков\classes</Filter>
-    </ClInclude>
     <ClInclude Include="FileHandlerClass.h">
       <Filter>Файлы заголовков\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="McWizard.h">
+      <Filter>Файлы заголовков\include files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHadler.h">
+      <Filter>Файлы заголовков\include files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

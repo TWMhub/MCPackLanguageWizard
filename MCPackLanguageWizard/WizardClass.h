@@ -9,33 +9,32 @@ namespace depozit_wizard {
 	class Wizard{
 	public:
 		//create class
+		/*  ----
+		this method is for 1 file,
+		but you can add std::vector < std::vector<std::vector<std::wstring>>
+		to process a bunch of files at once, and even in multithreading.
+		----  */
 		Wizard();
-		Wizard(std::vector<std::string>, fs::path, unsigned short);
+		Wizard(std::vector<std::wstring>, TargetInit::TargetInit, fs::path = "");
 
 		//init class
-		/*this method is for 1 file,
-		but you can add std::vector < std::vector<std::vector<std::wstring>> 
-		to process a bunch of files at once, and even in multithreading.*/
-		void init(std::vector<std::string>, fs::path, unsigned short); 
+		void init(std::vector<std::wstring>, TargetInit::TargetInit, fs::path = "");
 
 		//clear class
 		void clear();
 
 		std::vector<compiledFile> getAllFilesData();
-
-		//write strings to file (modpack or working files)
-		void build(unsigned short);
-
 	private:
 		//methods
 
-		void addFtbQuestData(std::vector<std::wstring>); //parse all data from ftb quest files
-		void addKubeJsData(std::vector<std::wstring>); //parse all data from kube js files
-		void addModsData(std::vector<std::wstring>); //parse all data from mods files
+		void FtbQuestDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from ftb quest files
+		void KubeJsDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from kube js files
+		void ModsDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from mods files
+
+		bool chekUniquePos(const size_t&, const size_t&, const size_t&, const size_t&);
 
 		//vars
 		std::vector<compiledFile> arrayCompiledFiles;
-		bool isEmpty;
 	};
 }
 
