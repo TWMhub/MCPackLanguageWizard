@@ -14,7 +14,12 @@ Unlike the previous version, MCPackLanguageWizard can work not only with quests 
 ```cpp
 namespace dw = depozit_wizard;
 ```
+- Modules:
+  - ```McWizard.h``` - class for parsing, accepts read files and parses according to the flag. further expansion of functionality is planned.
+  - ```FileHandler.h``` - provides basic methods for reading and writing files according to the direction of the project
+  - ```ProjectIO.h``` - class responsible for creation, editing and other manipulations with projects according to my vision
 - Since the library works with all text strings in the std::wstring format, I've added simple conversion functions.
+  
   > Note: sometimes you may need to use the .c_str() function for successful string conversion in these functions.
 ```cpp
 dw::strToWstr(const std::string& in); //-> std::wstring()
