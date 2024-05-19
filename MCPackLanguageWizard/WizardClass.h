@@ -2,12 +2,11 @@
 #define WIZARDCLASS_H
 #include "McWizard.h"
 #include "CompiledFileStruct.h"
-#include "DataProcessorClass.h"
 #include "TargetInitEnum.h"
 
 namespace depozit_wizard {
 
-	class Wizard : private DataProcessor{
+	class Wizard{
 	public:
 		//create class
 		Wizard();
