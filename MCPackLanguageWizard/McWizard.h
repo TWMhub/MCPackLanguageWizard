@@ -16,10 +16,10 @@ namespace fs = std::filesystem;
 namespace depozit_wizard {};
 
 //third-party libraries
-#include "rapidjson/document.h"
-#include "rapidjson/prettywriter.h"
-#include "yaml-cpp/yaml.h"	
-#include "zip.h"
+//#include "rapidjson/document.h"
+//#include "rapidjson/prettywriter.h"
+//#include "yaml-cpp/yaml.h"	
+//#include "zip.h"
 
 //another headers
 #include "WizardClass.h"

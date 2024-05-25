@@ -6,11 +6,11 @@ namespace depozit_wizard {
 		this->clear();
 	}
 
-	Wizard::Wizard(std::vector<std::wstring> inputFile, TargetInit::TargetInit target, fs::path path= "") {
+	Wizard::Wizard(std::vector<std::wstring> inputFile, TargetInit::TargetInit target, fs::path path) {
 		this->init(inputFile, target, path);
 	}
 
-	void Wizard::init(std::vector<std::wstring> inputFile, TargetInit::TargetInit target, fs::path path = "") {
+	void Wizard::init(std::vector<std::wstring> inputFile, TargetInit::TargetInit target, fs::path path) {
 
 		if (target == TargetInit::ftbQuests) {
 			this->FtbQuestDataParse(inputFile, path);
@@ -31,7 +31,7 @@ namespace depozit_wizard {
 		return this->arrayCompiledFiles;
 	}
 	//private
-	void Wizard::FtbQuestDataParse(std::vector<std::wstring> inputFile, fs::path path = "") {
+	void Wizard::FtbQuestDataParse(std::vector<std::wstring> inputFile, fs::path path) {
 		compiledFile file;
 		file.pathToFile = path;
 		file.target = TargetInit::ftbQuests;
@@ -90,7 +90,7 @@ namespace depozit_wizard {
 		this->arrayCompiledFiles.push_back(file);
 	}
 
-	void Wizard::KubeJsDataParse(std::vector<std::wstring> inputFile, fs::path path = "") {
+	void Wizard::KubeJsDataParse(std::vector<std::wstring> inputFile, fs::path path) {
 		compiledFile file;
 		file.target = TargetInit::kubeJS;
 		file.pathToFile = path;
@@ -114,7 +114,7 @@ namespace depozit_wizard {
 		this->arrayCompiledFiles.push_back(file);
 	}
 
-	void Wizard::ModsDataParse(std::vector<std::wstring> inputFile, fs::path path = "") {
+	void Wizard::ModsDataParse(std::vector<std::wstring> inputFile, fs::path path) {
 		compiledFile file;
 		arrayCompiledFiles.push_back(file);
 	}

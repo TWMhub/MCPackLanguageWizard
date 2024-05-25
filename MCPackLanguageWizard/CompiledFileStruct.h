@@ -5,7 +5,7 @@
 namespace depozit_wizard {
 	struct compiledFile {
 		fs::path pathToFile;						//in project (input)
-		TargetInit::TargetInit target;									//it is necessary to write to a specific file
+		unsigned short target;						//it is necessary to write to a specific file
 		std::vector<TextLine> compiledTextLines;	//orig loc lines
 	};
 }
