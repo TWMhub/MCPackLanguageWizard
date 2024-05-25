@@ -1,3 +1,13 @@
+/*--------------------------------------
+
+	this section is entirely devoted to working with files
+	all RECORDING methods work on the principle of complete overwriting, save the original files
+
+	why a class and not a function?
+	-because it is planned to extend the functionality to work with other file types (e.g. .jar)
+
+--------------------------------------*/
+
 #ifndef FILEHANDLERCLASS_H
 #define FILEHANDLERCLASS_H
 #include "FileHadler.h"
@@ -5,23 +15,18 @@
 
 namespace depozit_wizard {
 
-	class FileHandler {//a set of methods for working with files packed into a class for convenience
+	//a set of methods for working with files packed into a class for convenience
+	class FileHandler {
 	public:
-		//json
-		void initJson(std::string, fs::path, unsigned short); //initialise the project settings base file with all input data
-		void addJsonFlag(unsigned short); //adds flags to the project
-		void removeJsonFlag(unsigned short);
-		std::vector<std::wstring> getJsonData(); //retrieves json data //I don't know the best way to get specific things yet
-
-		//YAML
-		void writeYAMLFiles(const std::vector<compiledFile>&);
-		std::vector<compiledFile> getYAMLFiles();
-
-		//settings
-
-		//working files
 
 		//read&write files
+		std::vector<std::wstring> readFile(fs::path);
+		std::vector<std::vector<std::wstring>> readDir(fs::path);
+		void writeFile(const std::vector<std::wstring>&, fs::path);
+		//void writeFile(const std::vector<compiledFile>&, fs::path);
+
+	private:
+		bool isCorrectPath(fs::path, bool);
 	};
 
 }
