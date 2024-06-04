@@ -62,5 +62,8 @@
     <ClInclude Include="FileHadler.h">
       <Filter>Файлы заголовков\include files</Filter>
     </ClInclude>
+    <ClInclude Include="ProjectIO.h">
+      <Filter>Файлы заголовков\include files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

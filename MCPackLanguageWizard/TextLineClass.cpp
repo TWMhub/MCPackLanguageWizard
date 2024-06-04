@@ -63,18 +63,17 @@ namespace depozit_wizard {
 			return outData;
 
 		for (int i = 0; i < origLine.length() - 1; i++) { //search for all special characters in the original string
-			if (origLine[i] == L'&') {
-				outData.push_back(L"&" + origLine[i + 1]);
+			if (this->origLine.substr(i,1) == L"&") {
+				outData.push_back(std::wstring{ L"&" + origLine[i + 1] });
 			}
 		}
 
 		if (outData.size() == 0) //if there are no special characters at all
 			return outData;
 		
-
-		for (unsigned short i = 0; i < localeLine.length(); i++) {
-			if (localeLine[i] == L'&' && std::find(outData.begin(), outData.end(), localeLine[i] + localeLine[i + 1]) != outData.end()) {
-				outData.erase(std::remove(outData.begin(), outData.end(), localeLine[i] + localeLine[i + 1]), outData.end());
+		for (int i = 0; i < localeLine.length() - 1; i++) { //the strings are checked and the missing characters are found
+			if (localeLine[i] == L'&' && std::find(outData.begin(), outData.end(), std::wstring{ localeLine[i] } + std::wstring{ localeLine[i + 1] }) != outData.end()) {
+				outData.erase(std::remove(outData.begin(), outData.end(), std::wstring{ localeLine[i] } + std::wstring{ localeLine[i + 1] }), outData.end());
 			}
 		}
 

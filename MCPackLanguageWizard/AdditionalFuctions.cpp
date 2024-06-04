@@ -8,7 +8,7 @@ The MCPackLanguageWizard library is used.
 it allows you to parse and work with all the texts in minecraft builds that you can translate
 )";
 	}
-	void coutLibInfo() {
+	void printLibInfo() {
 		std::cout<<R"(
 The MCPackLanguageWizard library is used.
 it allows you to parse and work with all the texts in minecraft builds that you can translate
