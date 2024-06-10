@@ -1,3 +1,8 @@
+/*--------------------------------------
+* 
+* this class works with files of several formats found in minecraft modpacks, and serves to isolate the necessary data for translation
+* 
+--------------------------------------*/
 #ifndef WIZARDCLASS_H
 #define WIZARDCLASS_H
 #include "McWizard.h"
@@ -29,7 +34,8 @@ namespace depozit_wizard {
 
 		void FtbQuestDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from ftb quest files
 		void KubeJsDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from kube js files
-		void ModsDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from mods files
+		//while it is just empty code, it is strictly not recommended to use it
+		void ModsDataParse(std::vector<std::wstring>, fs::path = ""); //parse all data from mods files 
 
 		bool chekUniquePos(const size_t&, const size_t&, const size_t&, const size_t&);
 

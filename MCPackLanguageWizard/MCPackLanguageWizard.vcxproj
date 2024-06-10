@@ -134,6 +134,7 @@
     <ClInclude Include="FileHadler.h" />
     <ClInclude Include="FileHandlerClass.h" />
     <ClInclude Include="ProjectIO.h" />
+    <ClInclude Include="ProjectIOClass.h" />
     <ClInclude Include="TargetInitEnum.h" />
     <ClInclude Include="McWizard.h" />
     <ClInclude Include="TextLineClass.h" />

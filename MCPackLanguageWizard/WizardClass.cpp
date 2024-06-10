@@ -114,7 +114,7 @@ namespace depozit_wizard {
 		this->arrayCompiledFiles.push_back(file);
 	}
 
-	void Wizard::ModsDataParse(std::vector<std::wstring> inputFile, fs::path path) {
+	void Wizard::ModsDataParse(std::vector<std::wstring> inputFile, fs::path path) {//while it is just empty code, it is strictly not recommended to use it
 		compiledFile file;
 		arrayCompiledFiles.push_back(file);
 	}
