@@ -1,0 +1,54 @@
+countLines : 12
+type : FTBQuest
+translations:
+  - path: file1.txt
+    entries:
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 1
+        suspicions: false
+        original: "Using the &3Ostrum&r we've gathered, we can create the &dCyro Freezer&r. When given power, this machine will convert cold items like &bIce, Packed Ice, Blue Ice, or Ice Shards&r into &dCryo Fuel&r."
+        translated: "Используя собранный нами &3Острум&, мы можем создать &dCyro Freezer&r. При подаче энергии эта машина будет превращать холодные предметы, такие как &bIce, Packed Ice, Blue Ice или Ice Shards&r, в &dCryo Fuel&r."
+        
+      - pos: 2002
+        suspicions: false
+        original: "This is a test."
+        translated: "This is a test."
+  - path: folder/file2.txt
+    entries:
+      - pos: 121
+        suspicions: true
+        original: "Goodbye!"
+        translated: "Goodbye!"
+      - pos: 189
+        suspicions: false
+        original: "I saw a fly."
+        translated: "I saw a fly."

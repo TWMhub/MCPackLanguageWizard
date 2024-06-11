@@ -141,6 +141,7 @@
     <ClInclude Include="WizardClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ProjectIOClass.cpp" />
     <ClCompile Include="TextLineClass.cpp" />
     <ClCompile Include="AdditionalFuctions.cpp" />
     <ClCompile Include="FileHandlerClass.cpp" />
